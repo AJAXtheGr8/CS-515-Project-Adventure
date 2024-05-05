@@ -1,0 +1,138 @@
+{
+  "start": "main hall",
+  "rooms": [
+    {
+      "name": "main hall",
+      "desc": "The ominous gateway to your haunted adventure, where shadows dance and whispers linger, the game begins in this chilling chamber.",
+      "exits": {
+        "north": "banquet hall",
+        "northeast": "kitchen",
+        "northwest": "study room",
+        "east": "dining room",
+        "west": "library",
+        "upstairs": "home gym"
+      },
+      "items": [
+        "carpet",
+        "floating-candles"
+      ]
+    },
+    {
+      "name": "banquet hall",
+      "desc": "Within this decrepit banquet hall, where spectral guests await their eternal feast, a locked red door stands sentinel, its twin keyholes promising escape to those brave enough to uncover their secrets.",
+      "exits": {
+        "east": "kitchen",
+        "west": "study room",
+        "south": "main hall",
+        "north": "LOCKED"
+      }
+    },
+    {
+      "name": "library",
+      "desc": "A labyrinth of forgotten knowledge, where books whisper secrets and shadows lurk among the shelves.",
+      "exits": {
+        "north": "study room",
+        "east": "main hall"
+      }
+    },
+    {
+      "name": "study room",
+      "desc": "A chamber of arcane academia, where forgotten tomes and ancient scrolls whisper forbidden knowledge to those who dare to seek it.",
+      "exits": {
+        "east": "banquet hall",
+        "southeast": "main hall",
+        "south": "library"
+      },
+      "items": [
+        "2-paper-clips",
+        "book-on-occult-practices"
+      ]
+    },
+    {
+      "name": "dining room",
+      "desc": "A macabre tableau frozen in time, where ornate place settings lay untouched and ghostly apparitions linger in anticipation of a long-awaited meal.",
+      "exits": {
+        "north": "kitchen",
+        "west": "main hall"
+      },
+      "items": [
+        "rotten-food"
+      ]
+    },
+    {
+      "name": "kitchen",
+      "desc": "A cobweb-coated culinary chamber, where ghostly aromas waft through the air and long-abandoned pots simmer with spectral stew.",
+      "exits": {
+        "west": "banquet hall",
+        "south": "dining room",
+        "southwest": "main hall"
+      },
+      "items": [
+        "black-key"
+      ]
+    },
+    {
+      "name": "home gym",
+      "desc": "A hauntingly empty space, where spectral echoes of past workouts reverberate amidst the dusty weights and creaking exercise machines.",
+      "exits": {
+        "downstairs": "main hall",
+        "west": "storage room",
+        "east": "pets room"
+      }
+    },
+    {
+      "name": "pets room",
+      "desc": "A melancholic memorial to lost companions, where ethereal barks and ghostly purrs echo through the dimly lit chamber.",
+      "exits": {
+        "north": "large bedroom",
+        "west": "home gym"
+      }
+    },
+    {
+      "name": "large bedroom",
+      "desc": "A grandiose chamber of faded opulence, where echoes of bygone luxury mingle with the mournful wails of spectral residents.",
+      "exits": {
+        "south": "pets room",
+        "west": "master bedroom"
+      }
+    },
+    {
+      "name": "master bedroom",
+      "desc": " The heart of the mansion's haunted history, where the darkest secrets lie entombed amidst the faded grandeur and lingering echoes of forbidden love.",
+      "exits": {
+        "east": "large bedroom",
+        "west": "kids bedroom"
+      },
+      "items": [
+        "family-photo"
+      ]
+    },
+    {
+      "name": "kids bedroom",
+      "desc": "A forlorn sanctuary of innocence lost, where forgotten toys lie scattered amidst the cobwebs, and the faint echo of children's laughter mingles with the mournful whispers of the night.",
+      "exits": {
+        "east": "master bedroom",
+        "south": "storage room"
+      },
+      "items": [
+        "teddy-bear",
+        "diary"
+      ]
+    },
+    {
+      "name": "storage room",
+      "desc": " A forgotten vault of forgotten treasures and cursed relics, where shadows coil around forgotten artifacts and whispers beckon from the depths.",
+      "exits": {
+        "north": "kids bedroom",
+        "east": "home gym"
+      },
+      "items": [
+        "white-key"
+      ]
+    },
+    {
+      "name": "outside",
+      "desc": " Congratulations! You made it out. "
+    }
+  ]
+}
