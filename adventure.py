@@ -36,7 +36,7 @@ class Adventure:
 
             else:    
                 self.changeRoom(self.currentRoom['exits'][direction])
-                print(f'You go {direction}.\n')
+                print(f'\nYou go {direction}.\n')
                 self.look()
         else:
             # if direction in self.validDirections:
@@ -65,16 +65,16 @@ class Adventure:
         if str in self.currentRoom['items']:
             self.collectedItems.append(str)
             self.currentRoom['items'].remove(str)
-            print(f"You pick up the {str}.")
+            print(f"\nYou pick up the {str}.")
 
         else:
             print(f"There's no {str} anywhere.")
 
     def inventory(self):
         if len(self.collectedItems)==0:
-            print("You're not carrying anything.")
+            print("\nYou're not carrying anything.")
         else:    
-            print('Inventory: ')
+            print('\nInventory: ')
             for items in self.collectedItems:
                 print('  ',items)      
         
