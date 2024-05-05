@@ -20,9 +20,9 @@ class Adventure:
         except FileNotFoundError:
             print(f"Error: file '{filename}' not found.")
             sys.exit(1)
-        except json.JSONDecodeError:
-            print("Error: Invalid JSON format")
-            sys.exit(1)
+        # except json.JSONDecodeError:
+        #     print("Error: Invalid JSON format")
+        #     sys.exit(1)
 
     def changeRoom(self, str):
         for room in self.map['rooms']:
