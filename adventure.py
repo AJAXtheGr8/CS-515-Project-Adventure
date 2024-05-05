@@ -74,7 +74,7 @@ class Adventure:
         if len(self.collectedItems)==0:
             print("You're not carrying anything.")
         else:    
-            print('Inventory: ')
+            print('Inventory:')
             for items in self.collectedItems:
                 print(' ',items)      
         
