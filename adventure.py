@@ -62,7 +62,7 @@ class Adventure:
             pass
 
     def get(self,str):
-        if str in self.currentRoom['items']:
+        if 'items' in self.currentRoom and str in self.currentRoom['items']:
             self.collectedItems.append(str)
             self.currentRoom['items'].remove(str)
             print(f"You pick up the {str}.")
@@ -127,7 +127,7 @@ class Adventure:
         self.look()
         while not self.gameStopped:
             try:
-                player_command = self.getUserInput(input('What would you like to do?'))
+                player_command = self.getUserInput(input('What would you like to do? '))
    
                 if player_command[0] == 'quit':
                     self.quit()
