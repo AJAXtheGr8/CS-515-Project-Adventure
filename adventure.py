@@ -16,13 +16,42 @@ class Adventure:
     def loadMap(self,filename):
         try:
             with open (filename, 'r') as f:
-                return json.load(f)
+                mapJSON =  json.load(f)
+                assert self.checkMapValidity(mapJSON)
+                return mapJSON
         except FileNotFoundError:
             print(f"Error: file '{filename}' not found.")
             sys.exit(1)
-        # except json.JSONDecodeError:
-        #     print("Error: Invalid JSON format")
-        #     sys.exit(1)
+        except AssertionError:
+            print("Error: Invalid Map")
+            sys.exit(1)
+
+    def checkMapValidity(self,mapJSON):
+
+        roomNames = set()
+
+        if 'rooms' not in mapJSON or 'start' not in mapJSON:
+            return False
+            # print('False 1')
+        
+        for room in mapJSON['rooms']:
+            if not isinstance(room['name'],str) or not isinstance(room['desc'],str) or not isinstance(room['exits'],dict):
+                return False
+                # print('False 2')
+            
+        for room in mapJSON['rooms']:
+            roomNames.add(room['name'])
+        
+        if len(mapJSON['rooms']) > len(roomNames):
+            return False
+            # print('False 3')        
+        for room in mapJSON['rooms']:
+            for exit in room['exits']:
+                if room['exits'][exit] not in roomNames:
+                    # print(room['name'],room['exits'][exit])
+                    return False
+                    # print('False 4')
+        return True
 
     def changeRoom(self, str):
         for room in self.map['rooms']:
@@ -39,10 +68,8 @@ class Adventure:
                 print(f'You go {direction}.\n')
                 self.look()
         else:
-            # if direction in self.validDirections:
             print(f"There's no way to go {direction}.")
-            # elif direction not in self.validDirections:
-            #     print('Please enter a valid direction')
+
             
 
     def look(self):
@@ -56,8 +83,9 @@ class Adventure:
                 present_items += f'{item}, '
             print(present_items.strip()[0:-1])
         try:
-            exits = ' '.join(self.currentRoom['exits'].keys())
-            print(f"\nExits: {exits}\n")
+            if not self.currentRoom['name'] == 'outside':
+                exits = ' '.join(self.currentRoom['exits'].keys())
+                print(f"\nExits: {exits}\n")
         except:
             pass
 
