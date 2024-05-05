@@ -177,8 +177,11 @@ if __name__ == "__main__":
         
     map_file = sys.argv[1]
     if(map_file=='mansion.map'):
-        asciiArtFile = open('mansion_art.txt','r')
-        content = asciiArtFile.read()
-        print(content)
+        try:
+            asciiArtFile = open('mansion_art.txt','r')
+            content = asciiArtFile.read()
+            print(content)
+        except:
+            pass
     game = Adventure(map_file)
     game.startAdventure()
