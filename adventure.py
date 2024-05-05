@@ -128,6 +128,7 @@ class Adventure:
         while not self.gameStopped:
             try:
                 player_command = self.getUserInput(input('What would you like to do? '))
+                print()
 
                 if player_command[0] == 'quit':
                     self.quit()
