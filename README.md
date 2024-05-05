@@ -1,6 +1,6 @@
 <h1>Utkarsh Shanker (ushanker@stevens.edu)</h1>
 
-<b>Github URL:</b>
+<b>Github URL:</b> https://github.com/AJAXtheGr8/CS-515-Project-Adventure
 <br>
 <b>Hours spent on the project: </b> 10
 <br>
