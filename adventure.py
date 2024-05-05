@@ -46,7 +46,7 @@ class Adventure:
             
 
     def look(self):
-        print(f"> {self.currentRoom["name"]}\n\n{self.currentRoom["desc"]}")
+        print(f'> {self.currentRoom["name"]}\n\n{self.currentRoom["desc"]}')
         if self.currentRoom['name'] == 'outside':
             self.quit()
         if 'items' in self.currentRoom and len(self.currentRoom['items'])>0:
