@@ -39,10 +39,10 @@ class Adventure:
                 print(f'You go {direction}.\n')
                 self.look()
         else:
-            if direction in self.validDirections:
-                print(f"There's no way to go {direction}.")
-            elif direction not in self.validDirections:
-                print('Please enter a valid direction')
+            # if direction in self.validDirections:
+            print(f"There's no way to go {direction}.")
+            # elif direction not in self.validDirections:
+            #     print('Please enter a valid direction')
             
 
     def look(self):
@@ -128,8 +128,7 @@ class Adventure:
         while not self.gameStopped:
             try:
                 player_command = self.getUserInput(input('What would you like to do? '))
-                print()
-
+   
                 if player_command[0] == 'quit':
                     self.quit()
                 else:
@@ -137,7 +136,7 @@ class Adventure:
                         if len(player_command)>=2:
                             self.go(player_command[1])
                         else:
-                            print("Sorry, you need to 'go' somewhere.\n")    
+                            print("Sorry, you need to 'go' somewhere.")    
                     elif player_command[0] in self.validDirections:
                         self.go(player_command[0])
                     elif player_command[0] == 'look':
@@ -164,11 +163,6 @@ class Adventure:
             except EOFError:
                 print("Use 'quit' to exit.")
                 continue
-            except KeyboardInterrupt:
-                print("\n  ...")
-                print('KeyboardInterrupt')
-                sys.exit()
-
 
 
 if __name__ == "__main__":
