@@ -76,7 +76,7 @@ class Adventure:
         else:    
             print('Inventory: ')
             for items in self.collectedItems:
-                print('  ',items)      
+                print(' ',items)      
         
     def quit(self):
         print("Goodbye!")
