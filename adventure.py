@@ -22,9 +22,9 @@ class Adventure:
         except FileNotFoundError:
             print(f"Error: file '{filename}' not found.")
             sys.exit(1)
-        except AssertionError:
-            print("Error: Invalid Map")
-            sys.exit(1)
+        # except AssertionError:
+        #     print("Error: Invalid Map")
+        #     sys.exit(1)
 
     def checkMapValidity(self,mapJSON):
 
