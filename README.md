@@ -14,5 +14,5 @@ Another error was checking for the validity of maps, I got it down after few tri
 <b>The three extensions implemented:</b>
 
 - <b>The drop command:</b> Users can drop the pick the items and drop the items into any room
-- <b>The unlock command:</b> Users can unlock a blocked direction in one of the rooms and 'go' in that direction to win the game. (Hint: It's the north direction in the 'banquet hall'. But, you will need to have the correct 2 items in your possion before it can work)
+- <b>The unlock command:</b> Users can unlock a blocked direction in one of the rooms and 'go' in that direction to win the game. (Hint: It's the north direction in the 'banquet hall'. But, you will need to have the correct 2 items in your possession before it can work)
 - <b>Directions as verbs:</b> Users can simply type directions to go in that direction without the need for a specific 'go' command
