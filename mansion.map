@@ -25,7 +25,8 @@
         "west": "study room",
         "south": "main hall",
         "north": "LOCKED"
-      }
+      },
+      "items": []
     },
     {
       "name": "library",
@@ -33,7 +34,8 @@
       "exits": {
         "north": "study room",
         "east": "main hall"
-      }
+      },
+      "items": []
     },
     {
       "name": "study room",
@@ -78,7 +80,8 @@
         "downstairs": "main hall",
         "west": "storage room",
         "east": "pets room"
-      }
+      },
+      "items": []
     },
     {
       "name": "pets room",
@@ -86,7 +89,8 @@
       "exits": {
         "north": "large bedroom",
         "west": "home gym"
-      }
+      },
+      "items": []
     },
     {
       "name": "large bedroom",
@@ -94,7 +98,8 @@
       "exits": {
         "south": "pets room",
         "west": "master bedroom"
-      }
+      },
+      "items": []
     },
     {
       "name": "master bedroom",
@@ -132,7 +137,18 @@
     },
     {
       "name": "outside",
-      "desc": " Congratulations! You made it out. "
+      "desc": " Congratulations! You made it out. ",
+      "exits": {
+        "south": "banquet hall"
+      }
+    },
+    {
+      "name": "LOCKED",
+      "desc": " The way outside is locked. Find the keys to unlock",
+      "exits": {
+        "south": "banquet hall"
+      }
     }
+
   ]
 }
